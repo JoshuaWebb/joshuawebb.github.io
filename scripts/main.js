@@ -40,6 +40,7 @@ function DOMContentLoaded() {
             newLink.title = item.title;
             newLink.style.backgroundImage = 'url(' + item.iconUrl + ')';
             newLink.href = item.linkUrl;
+            newLink.style["-webkit-animation-delay"] = index * 0.1 + 's';
             newItem.appendChild(newLink);
             list.appendChild(newItem);
         });
