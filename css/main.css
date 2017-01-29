@@ -37,6 +37,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
+    flex-direction: column;
 }
 
 .centered {
@@ -47,4 +48,46 @@ body {
 
 .centered > * {
     padding: 0 12px 0 12px;
+}
+
+.bottomed {
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    transform: translate(-50%, 0);
+    margin: 0 auto;
+}
+
+.links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.links > li {
+    float: left;
+}
+
+.links > li a {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width:32px;
+    height:32px;
+    margin:8px;
+
+    /**
+     * brightness(0) # guarantee they are all black (consistent baseline)
+     * contrast(0)   # make them all ~50% grey
+     * brightness(3) # make them all white
+     **/
+    filter: brightness(0) contrast(0) brightness(3);
+
+    opacity: 0.5;
+}
+
+.links > li a:hover {
+    opacity: 1;
 }

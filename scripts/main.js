@@ -13,10 +13,39 @@ function initColor() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    DOMContentLoaded();
-});
+// http://stackoverflow.com/a/14388512
+function fetchJSONFile(path, callback) {
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = function() {
+        if (httpRequest.readyState === 4) {
+            if (httpRequest.status === 200) {
+                var data = JSON.parse(httpRequest.responseText);
+                if (callback) callback(data);
+            }
+        }
+    };
+    httpRequest.open('GET', path);
+    httpRequest.send();
+}
 
 function DOMContentLoaded() {
     initColor();
+    fetchJSONFile('data/links.json', function(data){
+        console.log(data);
+        var list = document.getElementById("links");
+        var newItems = [];
+        data.forEach(function(item, index) {
+            var newItem = document.createElement('li');
+            var newLink = document.createElement('a');
+            newLink.title = item.title;
+            newLink.style.backgroundImage = 'url(' + item.iconUrl + ')';
+            newLink.href = item.linkUrl;
+            newItem.appendChild(newLink);
+            list.appendChild(newItem);
+        });
+    });
 }
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    DOMContentLoaded();
+});

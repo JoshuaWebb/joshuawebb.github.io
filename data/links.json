@@ -1,0 +1,17 @@
+[
+    {
+        "iconUrl": "/icons/stackoverflow-icon.svg",
+        "linkUrl": "https://stackoverflow.com/u/1831350",
+        "title": "Stack Overflow"
+    },
+    {
+        "iconUrl": "/icons/github-icon.svg",
+        "linkUrl": "https://github.com/JoshuaWebb",
+        "title": "GitHub"
+    },
+    {
+        "iconUrl": "/icons/bandcamp-icon.svg",
+        "linkUrl": "https://bandcamp.com/bbewauhsoj",
+        "title": "Bandcamp Collection"
+    }
+]
