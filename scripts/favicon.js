@@ -56,7 +56,7 @@ function replaceColor(ctx, oldColor, newColor) {
     ctx.putImageData(map, 0, 0);
 }
 
-function randomizeFaviconColor() {
+function randomizeFaviconColor(callback) {
     var dimension = 16;
     var canvas = document.createElement('canvas');
     canvas.width = canvas.height = dimension;
@@ -77,5 +77,6 @@ function randomizeFaviconColor() {
         link.rel  = 'shortcut icon';
         link.href = canvas.toDataURL('image/x-icon');
         document.getElementsByTagName('head')[0].appendChild(link);
+        callback(newColor);
     }
 }

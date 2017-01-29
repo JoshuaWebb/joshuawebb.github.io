@@ -9,7 +9,7 @@ html, body {
 }
 
 body {                
-    background-color:#23231d;
+    background-color:#131311;
     color:#fff;
     
     font-family:'Open Sans', 'Arial', 'Sans-Serif';
@@ -23,7 +23,7 @@ body {
     text-align:right;
     
     border-right: 3px solid;
-    border-color: #ff2356;
+    border-color: transparent;
     color: #fff;
 }
 
