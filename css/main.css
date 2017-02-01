@@ -40,6 +40,10 @@ body {
     flex-direction: column;
 }
 
+.loaded > .placeholder{
+    display:none;
+}
+
 .centered {
     display:flex;
     flex-direction: row;
