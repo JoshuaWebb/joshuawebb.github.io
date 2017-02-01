@@ -89,7 +89,10 @@ body {
 
     opacity: 0.5;
     transform:scale(0);
-    animation: GrowIn 0.2s linear forwards;
+}
+
+.links.loaded > li a {
+    animation: GrowIn 0.2s linear forwards
 }
 
 .links > li a:hover {
