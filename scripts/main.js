@@ -31,7 +31,6 @@ function fetchJSONFile(path, callback) {
 function DOMContentLoaded() {
     initColor();
     fetchJSONFile('data/links.json', function(data){
-        console.log(data);
         var list = document.getElementById("links");
         var newItems = [];
         data.forEach(function(item, index) {

@@ -10,6 +10,11 @@
         "title": "GitHub"
     },
     {
+        "iconUrl": "/icons/linkedin-icon.svg",
+        "linkUrl": "https://www.linkedin.com/in/joshua-webb-b1988790",
+        "title": "LinkedIn"
+    },
+    {
         "iconUrl": "/icons/bandcamp-icon.svg",
         "linkUrl": "https://bandcamp.com/bbewauhsoj",
         "title": "Bandcamp Collection"
