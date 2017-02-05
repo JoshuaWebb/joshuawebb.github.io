@@ -80,14 +80,6 @@ body {
     width:3.5em;
     height:3.5em;
     margin:0.5em;
-
-    /**
-     * brightness(0) # guarantee they are all black (consistent baseline)
-     * contrast(0)   # make them all ~50% grey
-     * brightness(3) # make them all white
-     **/
-    filter: brightness(0) contrast(0) brightness(3);
-
     opacity: 0.5;
     transform:scale(0);
 }

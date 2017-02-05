@@ -57,7 +57,7 @@ function replaceColor(ctx, oldColor, newColor) {
 }
 
 function randomizeFaviconColor(callback) {
-    var dimension = 16;
+    var dimension = 32;
     var canvas = document.createElement('canvas');
     canvas.width = canvas.height = dimension;
 
@@ -69,7 +69,7 @@ function randomizeFaviconColor(callback) {
         var oldColor = { r: 255, g: 255, b: 255 };
         var newColor = generate_random_color();
 
-        ctx.drawImage(img, 0, 0);
+        ctx.drawImage(img, 0, 0, dimension, dimension);
         replaceColor(ctx, oldColor, newColor);
 
         var link = document.createElement('link');
