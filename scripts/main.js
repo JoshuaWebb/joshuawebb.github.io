@@ -8,7 +8,7 @@ function initColor() {
         styleSheet = styleEl.sheet;
 
         var newColorStr = 'rgb(' + newColor.r +',' + newColor.g +',' + newColor.b + ');';
-        var newRule = '.left { border-color:' + newColorStr + ' }';
+        var newRule = '.left > * { border-color:' + newColorStr + ' }';
         styleSheet.insertRule(newRule, styleSheet.cssRules.length );
     });
 }
